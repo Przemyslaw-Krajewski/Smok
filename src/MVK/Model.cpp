@@ -236,7 +236,8 @@ void Model::wyznaczKolejnyStanMenu()
 			}
 			else if(zaznaczonaOpcjaMenu == 5)//Nastepny poziom
 			{
-				wczytajPoziom(numerPoziomu+1);
+				numerPoziomu++;
+				wczytajPoziom(numerPoziomu);
 				ustawMenu(-1);
 			}
 		}
@@ -350,10 +351,10 @@ void Model::wyznaczStanCelu()
 			}
 			else
 			{
-				if(numerPoziomu < 6) numerPoziomu = 1;
-				else numerPoziomu -= 5;
+//				if(numerPoziomu < 6) numerPoziomu = 1;
+//				else numerPoziomu -= 5;
 
-				smok.ustawPoziom(numerPoziomu);
+//				smok.ustawPoziom(numerPoziomu);
 				wczytajPoziom(numerPoziomu);
 				ustawMenu(-1);
 			}
@@ -367,10 +368,10 @@ void Model::wyznaczStanCelu()
 	{
 		if(klawiatura.czyWcisnietoSpacje())
 		{
-			if(numerPoziomu < 3) numerPoziomu = 1;
-			else numerPoziomu -= 2;
+//			if(numerPoziomu < 3) numerPoziomu = 1;
+//			else numerPoziomu -= 2;
 
-			smok.ustawPoziom(numerPoziomu);
+//			smok.ustawPoziom(numerPoziomu);
 			wczytajPoziom(numerPoziomu);
 			ustawMenu(-1);
 		}
